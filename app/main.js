@@ -1,23 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import Root from './config/Root';
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root'),
-  );
-};
+// import Root from './config/Root';
 
-render(Root);
+// const render = (Component) => {
+//   ReactDOM.render(
+//     <AppContainer>
+//       <Component />
+//     </AppContainer>,
+//     document.getElementById('root'),
+//   );
+// };
 
-if (module.hot) {
-  module.hot.accept('./config/Root', () => {
-    const newApp = require('./config/Root').default;
-    render(newApp);
-  });
-}
+// render(Root);
+
+// if (module.hot) {
+//   module.hot.accept('./config/Root', () => {
+//     const newApp = require('./config/Root').default;
+//     render(newApp);
+//   });
+// }
+
+import Node from './containers/Node';
+
+render(
+    <Node />,
+  document.getElementById('root')
+);

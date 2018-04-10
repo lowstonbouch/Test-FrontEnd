@@ -12,13 +12,28 @@
   align-items: center;
 }
 
+h1{
+  font-family: "YesevaOne";
+  font-weight: 600;
+  color: #1d1dff;
+  font-size: 36px;
+}
+
 .player-wrapper{
   position: relative;
-
+  width: 85%;
+  margin: 0 auto;
+  height: 150px;
+  border: 2px solid #7878d4;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .image{
   position: absolute;
+  right: 2%;
+  top: 8%;
+  border-radius: 100px;
 }
 
 .player-name{
@@ -26,133 +41,21 @@
   font-family: "YesevaOne";
   font-weight: 600;
   color: #313131;
+  font-size: 30px;
+  left: 5%;
+  top: 5%;
 }
 
 .player-score{
   position: absolute;
   font-family: "YesevaOne";
   color: rgb(204, 153, 0);
+  left: 57%;
+  font-size: 30px;
 }
 
-@media screen 
- and (min-device-width: 761px) 
- and (max-device-width: 1920px)   
-{  
-  h1{
-    color: #4747f7;
-    font-size: 36px;
-  }
-  .player-wrapper{
-    width: 85%;
-    margin: 0 auto;
-    height: 150px;
-    border: 2px solid #3535fb;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  .image{
-    right: 2%;
-    top: 8%;
-    border-radius: 100px;
-  }
-
-  .player-score{
-    left: 57%;
-    font-size: 30px;
-  }
-
-  .star{
-    position: absolute;
-    right: -25%;
-    top: 0%;
-  }
-
-  .player-name{
-    font-size: 30px;
-    left: 5%;
-    top: 5%;
-  }
-}
-
-@media screen 
-and (min-device-width: 641px) 
-and (max-device-width: 760px)   
-{ 
-  h1{
-    color: #4747f7;
-    font-size: 36px;
-  }
-  .player-wrapper{
-    width: 85%;
-    margin: 0 auto;
-    height: 150px;
-    border: 2px solid #3535fb;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  .image{
-    right: 2%;
-    top: 8%;
-    border-radius: 100px;
-  }
-
-  .player-score{
-    left: 57%;
-    font-size: 30px;
-  }
-
-  .star{
-    position: absolute;
-    right: -25%;
-    top: 0%;
-  }
-
-  .player-name{
-    font-size: 30px;
-    left: 5%;
-    top: 5%;
-  }
-}
-
-@media screen 
-and (min-device-width: 320px) 
-and (max-device-width: 640px)   
-{
-  h1{
-    color: #4747f7;
-    font-size: 36px;
-  }
-  .player-wrapper{
-    width: 85%;
-    margin: 0 auto;
-    height: 150px;
-    border: 2px solid #3535fb;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  .image{
-    right: 2%;
-    top: 8%;
-    border-radius: 100px;
-  }
-
-  .player-score{
-    left: 57%;
-    font-size: 30px;
-  }
-
-  .star{
-    position: absolute;
-    right: -25%;
-    top: 0%;
-  }
-
-  .player-name{
-    font-size: 30px;
-    left: 5%;
-    top: 5%;
-  }
+.star{
+  position: absolute;
+  right: -25%;
+  top: 0%;
 }

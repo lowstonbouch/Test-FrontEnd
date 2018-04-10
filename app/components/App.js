@@ -34,7 +34,7 @@ export default class App extends Component {
           "imageUrl": "https://randomuser.me/api/portraits/women/74.jpg",
           "name": "Gianfranco",
           "score": 40
-        }
+        },
       ]
     };
     this.bubbleSort = this.bubbleSort.bind(this);
