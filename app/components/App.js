@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Player from './Player';
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -36,14 +37,35 @@ export default class App extends Component {
         }
       ]
     };
-    this.loadData();
+    this.bubbleSort = this.bubbleSort.bind(this);
   }
 
+  bubbleSort(players){
+    for (let i = 0; i < players.length - 1; i++) {
+      let m_min = players[i].score;
+      for (let j = i + 1; j < players.length; j++) {
+        if (players[j].score > m_min) {
+          let mm = players[i];
+          m_min = players[j].score;
+          players[i] = players[j];
+          players[j] = mm;
+        }
+      }
+    }
+  return players;
+  }
+
+  componentDidMount(){
+    this.setState({data: this.bubbleSort(this.state.data)})
+  }
 
   render() {
     return (
-    <div>
-      Hello, World!
+    <div className="content">
+      <h1>Global Score</h1>
+      {this.state.data.map(player => 
+        <Player key={player.id} player={player} /> 
+      )}
     </div>)
   }
 }
